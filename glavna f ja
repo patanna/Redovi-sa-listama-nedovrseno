@@ -1,0 +1,38 @@
+#include"Redovi.h"
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	Red prvii;
+	bool kraj = false;
+	cout <<
+		"\n1.Stavljanje podataka u red\n"
+		"2.Uzimanje podataka iz reda\n"
+		"3.Ispisivanje sadrzaja reda\n"
+		"4.Praznjenje reda\n"
+		"5.Trenutna lista kopirana u niz\n"
+		"6.Obrisi niz\n"
+		"7.Duzina liste\n"
+		"0.Zavrsetak rada\n\n";
+
+
+	while (!kraj) {
+		cout << "\nVas izbor?";
+		int izbor; cin >> izbor;
+
+		switch (izbor) {
+		case 1:cout << "Unesite broj?"; int broj; cin >> broj; prvii.popuni(broj); break;
+		case 2:prvii.uzmi(); break;
+		case 3:cout << "Red:  "; prvii.ispis(); cout << endl; break;
+		case 4:prvii.brisi(); break;
+		case 5:  cout<<            ;break;
+		case 6:               ;break;
+		case 7:cout << "Duzina:"<< prvii.duzina(); cout << endl; break;
+		case 0: kraj = true; exit(0);
+		default:cout << "\nPogresan izbor, pokusajte ponovo\n"; break;
+
+		}
+
+	}
+}
